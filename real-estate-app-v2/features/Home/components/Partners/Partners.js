@@ -1,9 +1,9 @@
-import { Image } from "@chakra-ui/react";
+import { Image, SimpleGrid } from "@chakra-ui/react";
 import { partners } from "./partnersConst";
 
 const Partners = () => {
   return (
-    <>
+    <SimpleGrid columns={partners.length} margin="0 auto" minChildWidth="150px">
       {partners.map((partner) => (
         <Image
           key={partner}
@@ -14,7 +14,7 @@ const Partners = () => {
           opacity="0.4"
         />
       ))}
-    </>
+    </SimpleGrid>
   );
 };
 

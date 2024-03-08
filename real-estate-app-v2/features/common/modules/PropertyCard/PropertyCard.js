@@ -39,7 +39,12 @@ const PropertyCard = (property) => {
             alignItems="flex-end"
             padding="1rem"
           >
-            <Text fontSize="3xl" fontWeight="medium" color="whiteAlpha.800">
+            <Text
+              fontSize="3xl"
+              fontWeight="medium"
+              color="whiteAlpha.800"
+              isTruncated
+            >
               {price}
             </Text>
           </Box>
@@ -52,7 +57,7 @@ const PropertyCard = (property) => {
             {address}
           </Text>
           <Text isTruncated>{title}</Text>
-          <HStack spacing="1.3rem" marginTop="1rem">
+          <HStack spacing="1.3rem" marginTop="1rem" wrap="wrap">
             <Flex alignItems="center" gap="0.3rem">
               <TbBed />
               {rooms}
@@ -61,7 +66,7 @@ const PropertyCard = (property) => {
               <TbBath />
               {baths}
             </Flex>
-            <Flex alignItems="center" gap="0.3rem">
+            <Flex alignItems="center" gap="0.3rem" isTruncated>
               <TbRuler />
               {sqSize}
               <sup>m2</sup>
